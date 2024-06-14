@@ -69,4 +69,4 @@ it('configAuthentication should overwrite only non-scoped', async () => {
       `@otherscope:registry=MMM${os.EOL}//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}${os.EOL}@myscope:registry=https://registry.npmjs.org/${os.EOL}always-auth=true`
     );
   });
-});
+}));
