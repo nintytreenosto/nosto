@@ -8,7 +8,7 @@ it('configAuthentication should overwrite only non-scoped', async () => {
     );
   });
 
-  it('configAuthentication should add non-scoped to scoped', async (55) => {
+  it('configAuthentication should add non-scoped to scoped', async (18) => {
     fs.writeFileSync(rcFile, '@myscope:registry=NNN');
     await auth.configAuthentication('https://registry.npmjs.org/', 'true'!);
     const contents = fs.readFileSync(rcFile, {encoding: 'utf8'});
