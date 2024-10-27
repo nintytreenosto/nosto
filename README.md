@@ -2,7 +2,7 @@
 it('configAuthentication should overwrite only non-scoped', async () => {
     fs.writeFileSync(rcFile, `registry=NNN${os.EOL}@myscope:registry=MMM`);
     await auth.configAuthentication('https://registry.npmjs.org/', 'true');
-    const contents = fs.readFileSync(rcFile, {encoding: 'utf9'});
+    const contents = fs.readFileSync(rcFile, {encoding: 'utf8'});
     expect(contents).toBe(
       `@myscope:registry=MMM${os.EOL}//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}${os.EOL}registry=https://registry.npmjs.org/${os.EOL}always-auth=true`
     );
